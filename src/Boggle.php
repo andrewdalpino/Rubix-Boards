@@ -34,7 +34,7 @@ class Boggle extends Grid
      *
      * @var \Rubix\Engine\Trie
      */
-    protected $prefix;
+    protected $dictionary;
 
     /**
      * @param  array  $words

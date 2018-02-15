@@ -2,7 +2,7 @@
     "name": "rubix/boards",
     "description": "An extension to the Rubix graph engine for solving board games.",
     "license": "MIT",
-    "keywords": ["php", "graph", "boggle", "scrabble", "maze"],
+    "keywords": ["php", "graph", "boggle", "scrabble"],
     "authors": [
         {
             "name": "Andrew DalPino",
