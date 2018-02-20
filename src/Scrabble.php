@@ -72,7 +72,7 @@ class Scrabble extends Grid
 
         foreach (range(1, static::HEIGHT) as $col) {
             foreach (range(1, static::WIDTH) as $row) {
-                $this->insert($this->counter->next(), [
+                $this->insert([
                     'col' => $col,
                     'row' => $row,
                     'letter' => null,
@@ -180,7 +180,7 @@ class Scrabble extends Grid
         if ($k === 0) {
             $result = $before . $string;
 
-            if (array_key_exists($result, $prefix->get('words', []))) {
+            if ($prefix->word) {
                 $temp = $this->score($result);
 
                 if ($temp > $score) {
