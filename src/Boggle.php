@@ -48,7 +48,7 @@ class Boggle extends Grid
 
         foreach (range(1, static::SIZE) as $col) {
             foreach (range(1, static::SIZE) as $row) {
-                $this->insert($this->counter()->next(), [
+                $this->insert([
                     'col' => $col,
                     'row' => $row,
                     'letter' => null,
@@ -115,7 +115,7 @@ class Boggle extends Grid
      */
     public function preset(array $letters) : Boggle
     {
-        $counter = new Counter();
+        $counter = 0;
 
         if (count($letters, COUNT_RECURSIVE) / 2 !== static::SIZE) {
             throw new InvalidArgumentException('Letter matrix must be the exact size of the board.');
@@ -123,7 +123,7 @@ class Boggle extends Grid
 
         foreach ($letters as $row) {
             foreach ($row as $letter) {
-                $this->find($counter->next())->set('letter', $letter);
+                $this->find(++$counter)->set('letter', $letter);
             }
         }
 

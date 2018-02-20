@@ -5921,7 +5921,6 @@ pharmacy
 phase
 phases
 phenomenon
-phentermine
 phi
 philosophy
 phoenix
@@ -5935,11 +5934,8 @@ photographic
 photographs
 photography
 photos
-photoshop
-phpbb
 phrase
 phrases
-phys
 physical
 physically
 physician
@@ -5949,7 +5945,6 @@ physiology
 pi
 piano
 pic
-pichunter
 pick
 picked
 picking
@@ -6055,7 +6050,6 @@ pointer
 pointing
 points
 poison
-pokemon
 poker
 poland
 polar
