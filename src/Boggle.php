@@ -195,7 +195,7 @@ class Boggle extends Grid
         if ($prefix->edges()->has($root->letter)) {
             $prefix = $prefix->edges()->get($root->letter)->node();
 
-            if (array_key_exists($string, $prefix->get('words', []))) {
+            if ($prefix->word) {
                 $words[] = $string;
             }
 
@@ -208,12 +208,11 @@ class Boggle extends Grid
                     }
                 }
             }
-        } else {
-            $prefix = $prefix->parent;
         }
 
         $discovered->detach($root);
         $string = substr($string, 0, -1);
+        $prefix = $prefix->parent;
     }
 
     /**
